@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debate Digest</title>
+  <link rel="stylesheet" href="styles_single_page.css">
+  <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.css" />
+</head>
+<body>
+  <div class="background-image" id="placeholderImage"></div>
+  <div class="background-image" id="backgroundImage"></div>
+  <!-- <gradio-lite>
+import gradio as gr
+def greet(name):
+   return "Hello, " + name + "!"
+gr.Interface(greet, "textbox", "textbox").launch()
+  </gradio-lite> -->
+  <nav class="navigation">
+    <ul>
+      <li><a href="claim.html">Structured Summary</a></li>
+      <li><a href="transcript.html">Plain Transcript</a></li>
+    </ul>
+  </nav>
+  
+  <div class="content">
+    <h1>Topic-wise Summary</h1>
+
+    <div class="header">
+
+    
+          
+      <div class="container">
+            <button onclick="summarizeDebate()" class="summarize-button" >Summarize</button>
+      </div>
+
+
+     </div>
+
+    <!-- <input type="text" id="imageUrlInput" placeholder="Enter image URL">
+    <button onclick="changeBackgroundImage()">Change Background</button> -->
+    
+    <div id="summaryResult" class="summary-container">
+      <!-- Default message -->
+      <p id="defaultMessage">Please click on the Summarize button above.</p>
+    </div>
+  </div>
+
+  <script src="script_index_single_page.js"></script>
+</body>
+</html>

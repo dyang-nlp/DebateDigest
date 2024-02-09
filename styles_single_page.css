@@ -1,0 +1,318 @@
+/* Reset default margin, padding, and height */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Background image styles */
+
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 4, 4, 0.365), rgba(1, 1, 46, 0.708)), url('background_with_profiles.jpg') no-repeat center top;
+  background-size: cover;
+  z-index: -2;
+}
+
+#placeholderImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Adjust z-index if needed */
+}
+
+
+
+
+/* Additional styles for the #years element */
+#years {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  max-width: 50px;
+}
+
+/* Center content vertically and horizontally */
+.content {
+  position: absolute;
+  top: 25%; /* Adjust top positioning */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width:80%; /* Adjust width as needed */
+  max-width: 900px; /* Adjust maximum width as needed */
+  z-index: 1; /* Ensure content is above the background */
+}
+
+
+.content h1 {
+  margin-top: 0;
+  /* max-width: 5; */
+  color: aliceblue;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Slider styles */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;  
+  background: #ffffff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/* Slider thumb styles */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #ff4d17;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #050908;
+  cursor: pointer;
+}
+
+/* Summary container styles */
+.summary-container {
+  position: fixed;
+  width: 95%;
+  overflow-y: auto;
+  margin-bottom: 100px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 300px;
+  text-align: left;
+}
+
+/* Dropdown styles */
+.summarize-dropdown {
+  padding: 2px 5px;
+  font-size: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  background-color: #ddeede;
+  color: rgb(13, 12, 12);
+  margin-right: 10px;
+  vertical-align: right;
+  height: 36px;
+  max-width: 500px;
+}
+
+/* Button styles */
+.summarize-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  text-align: center;
+  height: 36px;
+  line-height: 36px;
+  
+}
+
+/* Button hover effect */
+.summarize-button:hover {
+  background-color: #45a049;
+}
+
+/* Grid container for two columns */
+.container {
+  width: 100%; /* Ensure the container spans the full width of its parent */
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.row {
+  display: flex;
+  justify-content: center; /* Center the content horizontally within the row */
+}
+
+/* Dropdown container styles */
+.dropdown-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#defaultMessage {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+  text-align: justify;
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+.summary-content {
+  font-family: 'Arial', sans-serif;
+  text-align: justify;
+  white-space: pre-wrap; 
+}
+
+.navigation {
+  background-color: rgba(26, 25, 25, 0.7); /* Semi-transparent black background */
+  border-radius: 0px; /* Rounded corners */
+  padding: 3px; /* Padding around the links */
+  font-family: Arial, sans-serif; /* Stylish font */
+  text-align: right; /* Align the links to the right */
+  margin-bottom: 10px; /* Add some space between the navigation and the content */
+  height: 40px; /* Adjust the height of the navigation bar */
+  display: flex; /* Use Flexbox */
+  justify-content: flex-end; /* Align items to the end (right) */
+  align-items: center; /* Vertically center items */
+}
+
+.navigation ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0;
+}
+
+.navigation ul li {
+  display: inline; /* Display links horizontally */
+  margin-right: 20px; /* Add margin between each link */
+}
+
+.navigation ul li:last-child {
+  margin-right: 0; /* Remove margin from the last link to prevent extra spacing */
+}
+
+.navigation ul li a {
+  text-decoration: none; /* Remove underline */
+  color: #ecd7d7; /* Text color */
+  padding: 5px 10px; /* Padding around each link */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.navigation ul li a:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+  border-radius: 5px; /* Rounded corners on hover */
+}
+
+.summary-box-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.summary-header-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.summary-header {
+  padding: 5px;
+  border: 1px solid #3d2b2b00;
+  border-radius: 8px;
+  background-color: #0000008f;
+  color: #ffd7d7d3;
+  box-sizing: border-box;
+  width: 24%;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.summary-box-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  width: 100%;
+}
+
+.summary-box {
+  padding: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  background-color: #ffffffcc;
+  color: #000000d3;
+  box-sizing: border-box;
+  width: 24%;
+  max-height: 350px;
+  overflow-y: auto;
+  font-size: 15px;
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+  display: none;
+  /* transition: opacity 0.5s ease; */
+}
+
+
+.summary-header:nth-child(3) {
+  margin-left: 1%;
+}
+
+/* Apply margins to achieve the desired ratio */
+.summary-box:nth-child(3) {
+  margin-left: 1%;
+}
+
+
+.summary-box a {
+  color: rgb(172, 172, 236);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Style for the retrieval token */
+.retrieval-token,
+.retrieval-token-obama,
+.retrieval-token-romney {
+  cursor: pointer; /* Change cursor to pointer on hover */
+  color: black; /* Set the color of the text */
+  font-weight: bold; /* Set the font weight */
+}
+
+/* Hover effect for all retrieval tokens */
+.retrieval-token:hover,
+.retrieval-token-obama:hover,
+.retrieval-token-romney:hover {
+  color: #0056b3; /* Darker blue color on hover */
+}
+
+/* Highlighted paragraphs */
+.highlighted {
+  background-color: rgba(228, 228, 177, 0.87); /* Adjust the background color as needed */
+  font-weight: bold; /* Adjust the font weight as needed */
+  /* Add any other styling you want for highlighted paragraphs */
+}

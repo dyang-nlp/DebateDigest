@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debate Digest</title>
+  <link rel="stylesheet" href="styles_single_page.css">
+  <script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.css" />
+</head>
+<body>
+  <div class="background-image" id="placeholderImage"></div>
+  <div class="background-image" id="backgroundImage"></div>
+  <!-- <gradio-lite>
+import gradio as gr
+def greet(name):
+   return "Hello, " + name + "!"
+gr.Interface(greet, "textbox", "textbox").launch()
+  </gradio-lite> -->
+  <nav class="navigation">
+    <ul>
+      <li><a href="index.html">Topic-wise Summary</a></li>
+      <li><a href="transcript.html">Plain Transcript</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <h1>Structured Summary</h1>
+    <!-- <input type="range" min="1960" max="2020" step="4" value="1960" class="slider" id="range"> -->
+
+    <div class="header">
+
+    
+      <div class="container">
+        <div class="row">
+          <!-- Dropdown and Button Container -->
+          <div class="dropdown-container">
+            <!-- Option -->
+            <!-- <select id="debateOptions" class="summarize-dropdown"></select> -->
+            <!-- Option -->
+            <select id="topicOptions" class="summarize-dropdown">
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3" selected>Option 3 (Default)</option>
+            </select>
+            <!-- Button -->
+            <button onclick="summarizeDebate()" class="summarize-button">Summarize</button>
+          </div>
+        </div>
+      </div>
+      
+      
+
+
+     </div>
+
+    <!-- <input type="text" id="imageUrlInput" placeholder="Enter image URL">
+    <button onclick="changeBackgroundImage()">Change Background</button> -->
+    <div class="summary-box-wrapper">
+      <div class="summary-header-row">
+          <div class="summary-header">Retrieved documents</div>
+          <div class="summary-header">Candidate 1</div>
+          <div class="summary-header">Candidate 2</div>
+          <div class="summary-header">Retrieved documents</div>
+      </div>
+      <div class="summary-box-container">
+          <div class="summary-box" id="summaryBox1"></div>
+          <div class="summary-box" id="summaryBox2"></div>
+          <div class="summary-box" id="summaryBox3"></div>
+          <div class="summary-box" id="summaryBox4"></div>
+      </div>
+  </div>
+  
+      <!-- Default message -->
+      <!-- <p id="defaultMessage">Please select a debate and click on the Summarize button above.</p> -->
+    </div>
+  </div>
+
+  <script src="script_claim_single_page.js"></script>
+</body>
+</html>
